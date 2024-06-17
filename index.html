@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar start -->
+      <aside class="sidebar">
+        <div class="app-logo">
+          <img src="/assets/image/logo.png" alt="Website logo" />
+        </div>
+        <div class="sidebar-wrapper">
+          <div class="sidebar-item active">
+            <a href="index.html">
+              <i class="ri-dashboard-line ri-xl"></i>
+              <p>Bảng điều khiển</p>
+            </a>
+          </div>
+
+          <div class="sidebar-item">
+            <a href="#">
+              <i class="ri-file-list-2-line ri-xl"></i>
+              <p>Chăm sóc thành viên</p>
+            </a>
+          </div>
+
+          <div class="sidebar-item">
+            <a href="#">
+              <i class="ri-mail-line ri-xl"></i>
+              <p>Hộp thư</p>
+              <span class="badge rounded-circle d-inline-flex ms-auto unread"
+                >9</span
+              >
+            </a>
+          </div>
+
+          <div class="sidebar-item">
+            <a href="#">
+              <i class="ri-bar-chart-box-line ri-xl"></i>
+              <p>Báo cáo hiệu suất</p>
+            </a>
+          </div>
+
+          <div class="sidebar-item">
+            <a href="#">
+              <i class="ri-contacts-book-line ri-xl"></i>
+              <p>Kết nối của tôi</p>
+            </a>
+          </div>
+
+          <div class="sidebar-item">
+            <a href="#">
+              <i class="ri-team-line ri-xl"></i>
+              <p>Nhóm của tôi</p>
+            </a>
+          </div>
+
+          <div class="sidebar-item">
+            <a href="#">
+              <i class="ri-group-2-line ri-xl"></i>
+              <p>Nhóm tôi quản lí</p>
+            </a>
+          </div>
+
+          <hr />
+
+          <div class="sidebar-item">
+            <a href="#">
+              <i class="ri-planet-line ri-xl"></i>
+              <p>Khám phá nhóm VNE</p>
+            </a>
+          </div>
+
+          <div class="sidebar-item">
+            <a href="#">
+              <i class="ri-shake-hands-line ri-xl"></i>
+              <p>Chăm sóc thành viên</p>
+            </a>
+          </div>
+
+          <div class="sidebar-item sub-menu">
+            <a href="#">
+              <i class="ri-robot-2-line ri-xl"></i>
+              <p>Trợ lí VNE AI</p>
+            </a>
+
+            <div class="sidebar-sub-menu">
+              <div class="sidebar-sub-menu-item">
+                <a href="#">
+                  <i class="ri-lightbulb-flash-line ri-xl"></i>
+                  <p class="nav-item__desc">Gợi ý đối tác</p>
+                </a>
+              </div>
+              <div class="sidebar-sub-menu-item">
+                <a href="#">
+                  <i class="ri-lightbulb-flash-line ri-xl"></i>
+                  <p class="nav-item__desc">Gợi ý đối tác</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- Sidebar end -->
+
+      <div class="app-content">
+        <!-- Header start -->
+        <header class="header">
+          <nav class="navbar-header">
+            <div class="navbar-header__left d-none"></div>
+            <ul
+              class="navbar-nav navbar-header__right ms-auto flex-row align-items-center gap-3"
+            >
+              <li class="position-relative">
+                <a class="header-icon" href="#"
+                  ><i class="ri-notification-3-line ri-xl"></i>
+                  <span class="header-icon-badge unread">2</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <div class="header-avt">
+                    <img
+                      class="avatar-image rounded-circle"
+                      src="/assets/image/B1.jpg"
+                      alt="User avatar"
+                    />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <!-- Header end -->
+
+        <!-- Main content -->
+        <main class="main">
+          <!-- Page heading -->
+          <section class="d-flex gap-3 my-3 w-100">
+            <div class="control-icon-container">
+              <div class="m-auto"><i class="ri-apps-line ri-xl"></i></div>
+            </div>
+            <p class="my-auto page-heading">Bảng điều khiển</p>
+          </section>
+
+          <!-- Progress bar start-->
+          <section class="mb-4 border rounded-2">
+            <ul class="stepper">
+              <li class="stepper__item completed">
+                <div class="stepper__circle">
+                  <span>1</span>
+                  <i class="ri-check-line"></i>
+                </div>
+                <h3 class="stepper__title">Tiếp nhận</h3>
+                <p class="stepper__desc"></p>
+              </li>
+              <!-- Other steps -->
+              <li class="stepper__item completed">
+                <div class="stepper__circle">
+                  <span>2</span> <i class="ri-check-line"></i>
+                </div>
+                <h3 class="stepper__title">Hỗ trợ</h3>
+                <p class="stepper__desc"></p>
+              </li>
+
+              <li class="stepper__item current">
+                <div class="stepper__circle">
+                  <span>3</span> <i class="ri-check-line"></i>
+                </div>
+                <h3 class="stepper__title">Chuyển đổi</h3>
+                <p class="stepper__desc"></p>
+              </li>
+
+              <li class="stepper__item">
+                <div class="stepper__circle">
+                  <span>4</span> <i class="ri-check-line"></i>
+                </div>
+                <h3 class="stepper__title">Báo cáo</h3>
+                <p class="stepper__desc"></p>
+              </li>
+
+              <li class="stepper__item">
+                <div class="stepper__circle">
+                  <span>5</span> <i class="ri-check-line"></i>
+                </div>
+                <h3 class="stepper__title">Hoàn tất</h3>
+                <p class="stepper__desc"></p>
+              </li>
+            </ul>
+          </section>
+          <!-- Progressing bar end-->
+
+          <!-- Overall info start -->
+          <section class="border rounded-2 w-100 overall_info_container">
+            <div class="overall_info_item">
+              <p>Cấp bật</p>
+              <p>Thành viên tín nhiệm 1</p>
+            </div>
+            <div class="overall_info_item">
+              <p>Số kết nối</p>
+              <p>30</p>
+            </div>
+            <div class="overall_info_item">
+              <p>Trao cơ hội</p>
+              <p>200</p>
+            </div>
+            <div class="overall_info_item">
+              <p>Ngày hết hạn tín nhiệm</p>
+              <p>6 tháng 6, 2025</p>
+            </div>
+          </section>
+          <!-- Overall info end -->
+
+          <!-- Tab start-->
+          <section class="">
+            <div class="d-flex border-bottom position-relative mb-4">
+              <!-- Tab heading -->
+              <div class="tab_btn active">
+                <span> Nhiệm vụ </span>
+              </div>
+              <div class="tab_btn">
+                <span>Nhật ký hoạt động</span>
+              </div>
+              <div class="tab_line"></div>
+            </div>
+
+            <!-- Tab content -->
+            <div class="d-flex gap-4">
+              <!-- Left content tab Nhiệm vụ -->
+              <div class="w-50 content gap-4 flex-column active">
+                <div class="left_content">
+                  <!--  -->
+                  <div class="d-flex align-items-center px-4 pt-3 pb-2">
+                    <div
+                      class="d-flex gap-2 h-100 align-items-center justify-content-center me-4"
+                    >
+                      <p class="list_text">
+                        <i class="ri-list-check ri-lg"></i>
+                      </p>
+                      <p class="mb-0 list_text">Danh Sách</p>
+                    </div>
+
+                    <span class="badge tagging--yellow"
+                      >3 việc chưa hoàn tất</span
+                    >
+
+                    <div class="ms-auto d-flex gap-2">
+                      <a class="link_text" href="mission-detail.html">
+                        <span>Xem tất cả</span>
+                        <i class="ri-arrow-right-s-line ri-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!--  -->
+
+                  <div class="task-list">
+                    <div class="task-item">
+                      <div class="task-item-icon"></div>
+                      <div class="task-item-content">
+                        <p>Phiếu đăng kí chứng từ nộp phí</p>
+                        <p>
+                          Đăng ký cộng đồng tín nhiệm và trở thành nhà cung cấp
+                          tín nhiệm
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="task-item">
+                      <div class="task-item-icon"></div>
+                      <div class="task-item-content">
+                        <p>Hoàn thành Thông tin Hồ sơ cá nhân</p>
+                        <p>
+                          Hồ sơ cá nhân là nơi giúp các đối tác hiểu hơn về bạn
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="task-item">
+                      <div class="task-item-icon"></div>
+                      <div class="task-item-content">
+                        <p>Hoàn thành hồ sơ nhà cung cấp</p>
+                        <p>
+                          Hoàn thành hồ sơ để trở thành nhà cung cấp tín nhiệm
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="task-item">
+                      <div class="task-item-icon">
+                        <i class="ri-check-line ri-2x"></i>
+                      </div>
+                      <div class="task-item-content">
+                        <p>Hoàn thành báo cáo xác minh</p>
+                        <p>Hoàn tất hồ sơ và được cấp mã số tín nhiệm VNE</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                </div>
+
+                <div class="left_content">
+                  <div class="d-flex align-items-center px-4 py-3">
+                    <div
+                      class="d-flex gap-2 h-100 align-items-center justify-content-center me-4"
+                    >
+                      <p class="list_text">
+                        <i class="ri-list-check ri-lg"></i>
+                      </p>
+                      <p class="mb-0 list_text">
+                        Lợi ích khi hoàn thành nhiệm vụ
+                      </p>
+                    </div>
+
+                    <div class="ms-auto d-flex gap-2">
+                      <a class="link_text" href="mission-detail.html">
+                        <span>Xem tất cả</span>
+                        <i class="ri-arrow-right-s-line ri-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="misssion-list">
+                    <div class="mission-item">
+                      <div class="mission-item-image">
+                        <img src="/assets/image/svg/rating.svg" alt="" />
+                      </div>
+                      <div class="mission-item-description">
+                        <p>Được hiển thị Điểm đánh giá (5 sao)</p>
+                        <p>Hoàn tất hồ sơ và được cấp mã số tín nhiệm VNE</p>
+                      </div>
+
+                      <div class="mission-item-image-navigate">
+                        <i class="ri-arrow-right-line ri-2x"></i>
+                      </div>
+                    </div>
+                    <div class="mission-item">
+                      <div class="mission-item-image">
+                        <img
+                          src="/assets/image/svg/diamon-performance.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="mission-item-description">
+                        <p>Cấp độ hiệu suất kim cương (0-5): 01</p>
+                        <p>Hoàn tất hồ sơ và được cấp mã số tín nhiệm VNE</p>
+                      </div>
+
+                      <div class="mission-item-image-navigate">
+                        <i class="ri-arrow-right-line ri-2x"></i>
+                      </div>
+                    </div>
+                    <div class="mission-item">
+                      <div class="mission-item-image">
+                        <img src="/assets/image/svg/report.svg" alt="" />
+                      </div>
+                      <div class="mission-item-description">
+                        <p>
+                          Có báo cáo xác minh, cấp mã số tín nhiệm, cấp chứng
+                          nhận
+                        </p>
+                        <p>Hoàn tất hồ sơ và được cấp mã số tín nhiệm VNE</p>
+                      </div>
+
+                      <div class="mission-item-image-navigate">
+                        <i class="ri-arrow-right-line ri-2x"></i>
+                      </div>
+                    </div>
+                    <div class="mission-item">
+                      <div class="mission-item-image">
+                        <img src="/assets/image/svg/access-vne.svg" alt="" />
+                      </div>
+                      <div class="mission-item-description">
+                        <p>Truy cập vào mạng lưới kết nối VNE</p>
+                        <p>
+                          kết nối, trao cơ hội, tin nhắn, xem thông tin thành
+                          viên trong nhóm, tìm kiếm đối tác
+                        </p>
+                      </div>
+
+                      <div class="mission-item-image-navigate">
+                        <i class="ri-arrow-right-line ri-2x"></i>
+                      </div>
+                    </div>
+
+                    <div class="mission-item">
+                      <div class="mission-item-image">
+                        <img src="/assets/image/svg/diamon-level.svg" alt="" />
+                      </div>
+                      <div class="mission-item-description">
+                        <p>Cấp độ hiệu suất kim cương (0-5): 01</p>
+                        <p>Hoàn tất hồ sơ và được cấp mã số tín nhiệm VNE</p>
+                      </div>
+
+                      <div class="mission-item-image-navigate">
+                        <i class="ri-arrow-right-line ri-2x"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Left content tab Nhật ký hoạt động -->
+              <div class="w-50 content gap-4 flex-column">
+                <div class="left_content">
+                  <div class="d-flex align-items-center px-4 py-3">
+                    <div
+                      class="d-flex gap-2 h-100 align-items-center justify-content-center me-4"
+                    >
+                      <p class="list_text">
+                        <i class="ri-list-check ri-lg"></i>
+                      </p>
+                      <p class="mb-0 list_text">30 Ngày gần nhất</p>
+                    </div>
+
+                    <div class="ms-auto d-flex gap-2">
+                      <a class="link_text" href="#">
+                        <span>Xem tất cả</span>
+                        <i class="ri-arrow-right-s-line ri-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="time-line-container">
+                    <ul class="vertical-stepper">
+                      <li class="vertical-stepper__item time-line pink">
+                        <div class="vertical-stepper__content">
+                          <div class="vertical-stepper__content-circle">
+                            <i class="ri-file-text-line ri-xl"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="vertical-stepper__title">
+                            <p>Him Lam Modun cảm ơn bạn</p>
+                            <p>14:00 - Hôm qua</p>
+                          </div>
+
+                          <p class="vertical-stepper__desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ducimus, doloremque ut, eius cum in repellat
+                            temporibus rem quod officia eligendi dolores
+                            necessitatibus at aperiam accusantium provident
+                            consequuntur eaque quaerat fuga.
+                          </p>
+                        </div>
+                      </li>
+
+                      <li class="vertical-stepper__item time-line blue">
+                        <div class="vertical-stepper__content">
+                          <div class="vertical-stepper__content-circle">
+                            <i class="ri-phone-line ri-xl"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="vertical-stepper__title">
+                            <p>Sea Bank trao cơ hội</p>
+                            <p>14:00 - 28 tháng 9, 2023</p>
+                          </div>
+                          <p class="vertical-stepper__desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ducimus, doloremque ut, eius cum in repellat
+                            temporibus rem quod officia eligendi dolores
+                            necessitatibus at aperiam accusantium provident
+                            consequuntur eaque quaerat fuga.
+                          </p>
+                        </div>
+                      </li>
+
+                      <li class="vertical-stepper__item time-line yellow">
+                        <div class="vertical-stepper__content">
+                          <div class="vertical-stepper__content-circle">
+                            <i class="ri-group-3-line ri-xl"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="vertical-stepper__title">
+                            <p>Sea Bank mời kết nối thành công</p>
+                            <p>16:00 - 25 tháng 9, 2023</p>
+                          </div>
+                          <p class="vertical-stepper__desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ducimus, doloremque ut, eius cum in repellat
+                            temporibus rem quod officia eligendi dolores
+                            necessitatibus at aperiam accusantium provident
+                            consequuntur eaque quaerat fuga.
+                          </p>
+                        </div>
+                      </li>
+
+                      <li class="vertical-stepper__item time-line d-none">
+                        <div class="vertical-stepper__content">
+                          <div class="vertical-stepper__content-circle">
+                            <i class="ri-group-3-line ri-xl"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="vertical-stepper__title">
+                            <p>Sea Bank mời kết nối thành công</p>
+                            <p>16:00 - 25 tháng 9, 2023</p>
+                          </div>
+                          <p class="vertical-stepper__desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ducimus, doloremque ut, eius cum in repellat
+                            temporibus rem quod officia eligendi dolores
+                            necessitatibus at aperiam accusantium provident
+                            consequuntur eaque quaerat fuga.
+                          </p>
+                        </div>
+                      </li>
+
+                      <li class="vertical-stepper__item time-line d-none">
+                        <div class="vertical-stepper__content">
+                          <div class="vertical-stepper__content-circle">
+                            <i class="ri-group-3-line ri-xl"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="vertical-stepper__title">
+                            <p>Sea Bank mời kết nối thành công</p>
+                            <p>16:00 - 25 tháng 9, 2023</p>
+                          </div>
+                          <p class="vertical-stepper__desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ducimus, doloremque ut, eius cum in repellat
+                            temporibus rem quod officia eligendi dolores
+                            necessitatibus at aperiam accusantium provident
+                            consequuntur eaque quaerat fuga.
+                          </p>
+                        </div>
+                      </li>
+
+                      <li class="vertical-stepper__item time-line d-none">
+                        <div class="vertical-stepper__content">
+                          <div class="vertical-stepper__content-circle">
+                            <i class="ri-group-3-line ri-xl"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="vertical-stepper__title">
+                            <p>Sea Bank mời kết nối thành công</p>
+                            <p>16:00 - 25 tháng 9, 2023</p>
+                          </div>
+                          <p class="vertical-stepper__desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ducimus, doloremque ut, eius cum in repellat
+                            temporibus rem quod officia eligendi dolores
+                            necessitatibus at aperiam accusantium provident
+                            consequuntur eaque quaerat fuga.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div
+                      class="d-flex w-100 align-items-center justify-content-center"
+                    >
+                      <button
+                        id="load-more-btn"
+                        type="button"
+                        class="btn btn-primary btn-sm"
+                      >
+                        Xem thêm
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Right content -->
+              <div class="right_content align-self-start w-50">
+                <div class="d-flex align-items-center px-4 pt-3 pb-2">
+                  <div
+                    class="d-flex gap-2 h-100 align-items-center justify-content-center me-4"
+                  >
+                    <p class="list_text text-lg">Sự kiện sắp diễn ra</p>
+                  </div>
+
+                  <div class="ms-auto d-flex gap-2">
+                    <a class="link_text" href="#">
+                      <span>Xem tất cả</span>
+                      <i class="ri-arrow-right-s-line ri-lg"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Event Card List start-->
+
+                <div class="p-4 pt-0">
+                  <!-- Event Card start -->
+                  <div class="card-container yellow p-4">
+                    <div class="card-header">
+                      <span class="badge tagging--yellow">Hôm nay</span>
+                      <span class="card-option">
+                        <i class="ri-more-2-line"></i>
+                      </span>
+                    </div>
+
+                    <div class="card-description">
+                      <div class="card-description__content">
+                        <p>Nhóm VNE SUPPORT 01 - Họp định kì</p>
+                        <p>
+                          <i class="ri-time-line ri-lg"></i>
+                          <span>8:00 - 9:00 AM</span>
+                        </p>
+                      </div>
+
+                      <div class="avatar-group">
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 1</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 2</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 3</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 4</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 5</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Event Card end-->
+                  <div class="card-container blue p-4">
+                    <div class="card-header">
+                      <span class="badge tagging--blue">30 tháng 9, 2024</span>
+                      <span class="card-option">
+                        <i class="ri-more-2-line"></i>
+                      </span>
+                    </div>
+
+                    <div class="card-description">
+                      <div class="card-description__content">
+                        <p>Tổng kết giải thưởng VNE năm 2024</p>
+                        <p>
+                          <i class="ri-time-line ri-lg"></i>
+                          <span>8:00 - 9:00 AM</span>
+                        </p>
+                      </div>
+
+                      <div class="avatar-group">
+                        <div class="avatar background-blue">
+                          <span class="avatar-name">Someone 1</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar background-pink">
+                          <span class="avatar-name">Someone 2</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 3</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar background-yellow">
+                          <span class="avatar-name">Someone 4</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 5</span>
+                          <div class="default-user-avt">
+                            <i class="ri-user-line ri-xl"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="card-container green p-4">
+                    <div class="card-header">
+                      <span class="badge tagging--green">30 tháng 9, 2024</span>
+                      <span class="card-option">
+                        <i class="ri-more-2-line"></i>
+                      </span>
+                    </div>
+
+                    <div class="card-description">
+                      <div class="card-description__content">
+                        <p>Hội nghị đỉnh cao năm 2024</p>
+                        <p>
+                          <i class="ri-time-line ri-lg"></i>
+                          <span>8:00 - 9:00 AM</span>
+                        </p>
+                      </div>
+
+                      <div class="avatar-group">
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 1</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 2</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 3</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 4</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                        <div class="avatar">
+                          <span class="avatar-name">Someone 5</span>
+                          <img src="/assets/image/B1.jpg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Tab end-->
+        </main>
+        <!-- Header end -->
+      </div>
+    </div>
+
+    <!--  -->
+    <script src="/assets/js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
