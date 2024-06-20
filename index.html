@@ -33,15 +33,15 @@
           <img src="assets/image/logo.png" alt="Website logo" />
         </div>
         <div class="sidebar-wrapper">
-          <div class="sidebar-item active">
-            <a href="index.html">
+          <div class="sidebar-item">
+            <a href="/index.html">
               <i class="ri-dashboard-line ri-xl"></i>
               <p>Bảng điều khiển</p>
             </a>
           </div>
 
           <div class="sidebar-item">
-            <a href="#">
+            <a href="/member-support.html">
               <i class="ri-file-list-2-line ri-xl"></i>
               <p>Chăm sóc thành viên</p>
             </a>
@@ -141,7 +141,7 @@
                 >
               </li>
               <li>
-                <a href="#">
+                <a id="user-profile" class="user-profile" href="#">
                   <div class="header-avt">
                     <img
                       class="avatar-image rounded-circle"
@@ -149,6 +149,20 @@
                       alt="User avatar"
                     />
                   </div>
+                  <ul id="user-profile-options" class="user-menu-list">
+                    <li>
+                      <a href="#">
+                        <i class="ri-menu-line ri-lg"></i>
+                        <span>Sub menu 1</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="ri-logout-box-line ri-lg"></i>
+                        <span>Đăng xuất</span>
+                      </a>
+                    </li>
+                  </ul>
                 </a>
               </li>
             </ul>
@@ -253,7 +267,7 @@
               <div class="w-50 content gap-4 flex-column active">
                 <div class="left_content">
                   <!--  -->
-                  <div class="d-flex align-items-center px-4 pt-3 pb-2">
+                  <div class="d-flex align-items-center px-4 py-3">
                     <div
                       class="d-flex gap-2 h-100 align-items-center justify-content-center me-4"
                     >
@@ -263,12 +277,12 @@
                       <p class="mb-0 list_text">Danh Sách</p>
                     </div>
 
-                    <span class="badge tagging--yellow"
+                    <span class="badge tagging--yellow-light"
                       >3 việc chưa hoàn tất</span
                     >
 
                     <div class="ms-auto d-flex gap-2">
-                      <a class="link_text" href="mission-detail.html">
+                      <a class="link_text" href="/mission-detail.html">
                         <span>Xem tất cả</span>
                         <i class="ri-arrow-right-s-line ri-lg"></i>
                       </a>
@@ -336,14 +350,14 @@
                     </div>
 
                     <div class="ms-auto d-flex gap-2">
-                      <a class="link_text" href="mission-detail.html">
+                      <a class="link_text" href="/mission-detail.html">
                         <span>Xem tất cả</span>
                         <i class="ri-arrow-right-s-line ri-lg"></i>
                       </a>
                     </div>
                   </div>
                   <!--  -->
-                  <div class="misssion-list">
+                  <div class="mission-list">
                     <div class="mission-item">
                       <div class="mission-item-image">
                         <img src="assets/image/svg/rating.svg" alt="" />
@@ -589,7 +603,7 @@
               </div>
               <!--Right content -->
               <div class="right_content align-self-start w-50">
-                <div class="d-flex align-items-center px-4 pt-3 pb-2">
+                <div class="d-flex align-items-center px-4 py-3">
                   <div
                     class="d-flex gap-2 h-100 align-items-center justify-content-center me-4"
                   >
@@ -606,7 +620,7 @@
 
                 <!-- Event Card List start-->
 
-                <div class="p-4 pt-0">
+                <div class="event-list">
                   <!-- Event Card start -->
                   <div class="card-container yellow p-4">
                     <div class="card-header">
@@ -684,7 +698,7 @@
                           <span class="avatar-name">Someone 4</span>
                           <img src="assets/image/B1.jpg" alt="" />
                         </div>
-                        <div class="avatar">
+                        <div class="avatar position-static">
                           <span class="avatar-name">Someone 5</span>
                           <div class="default-user-avt">
                             <i class="ri-user-line ri-xl"></i>
