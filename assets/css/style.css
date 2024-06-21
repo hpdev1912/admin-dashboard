@@ -1201,12 +1201,12 @@ input:checked + .slider .off {
   margin: 8px 0;
 }
 
-/* .task-board-header {
+.task-board-header {
   position: sticky;
   top: 0;
   z-index: 3;
-  background: var(--neutral-color-200);
-} */
+  background: white;
+}
 
 .task-board-header,
 .task-board-content {
