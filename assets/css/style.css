@@ -1223,7 +1223,7 @@ input:checked + .slider .off {
 .task-board-header .task-list-header,
 .task-board-content .task-list {
   flex-shrink: 0;
-  width: 355px;
+  width: 315px;
 }
 
 .task-board-content .task-list {
