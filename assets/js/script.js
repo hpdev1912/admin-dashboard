@@ -19,9 +19,12 @@ const navLinks = document.querySelectorAll(".sidebar-item a");
 
 document.addEventListener("DOMContentLoaded", function () {
   const currentPath = window.location.pathname;
-
   navLinks.forEach(function (link) {
-    if (link.getAttribute("href").indexOf(currentPath || "/") !== -1) {
+    if (
+      currentPath.includes(link.getAttribute("href")) ||
+      (currentPath === "/mission-detail.html" &&
+        link.getAttribute("href") === "index.html")
+    ) {
       link.parentElement.classList.add("active");
 
       navItemList.forEach((item) => {
