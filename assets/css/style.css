@@ -1,6 +1,6 @@
 /*========== VARIABLES CSS ==========*/
 :root {
-  --header-height: 76px;
+  --header-height: 48px;
   --sidebar-width: 256px;
 
   /*========== Colors ==========*/
@@ -11,7 +11,7 @@
   --secondary-color-800: #004065;
 
   --text-color: #565d6d;
-  --text-color-heading: #171a1f;
+  --text-color-heading: rgba(0, 0, 0, .9);
   --text-color-description: #6f7787;
   --text-color-title: #323743;
 
@@ -41,6 +41,7 @@
   /*========== Font size ==========*/
   --font-regular: 1rem; /* 16px */
   --font-regular-sm: 0.875rem; /* 14px */
+  --bs-body-font-size: 14px;
 
   /*========== Font weight ==========*/
   --font-regular: 400;
@@ -142,7 +143,7 @@ ol {
   overflow: hidden;
   width: 100%;
   max-width: unset;
-  padding: 10px 20px;
+  padding: 4px 20px;
 }
 
 .sidebar {
@@ -361,7 +362,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px;
+  padding: 8px;
   border-radius: 50%;
   background-color: var(--neutral-color-200);
 }
@@ -371,16 +372,15 @@ a.control-icon-container {
 }
 
 .page-heading {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #171a1f;
+  font-size: 18px;
+  color: var(--text-color-heading,rgba(0, 0, 0, .9));
 }
 
 /*============= Progressbar start===========*/
 
 .stepper {
   display: flex;
-  padding: 16px;
+  padding: 8px;
   width: 50%;
 }
 
@@ -398,7 +398,7 @@ a.control-icon-container {
   border-radius: 50%;
   background-color: lightgray;
 
-  margin: 0 auto 1rem;
+  margin: 0 auto 8px;
   color: black;
   display: flex;
   align-items: center;
@@ -447,7 +447,7 @@ a.control-icon-container {
 
 .stepper__title {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
 
   margin-bottom: 0;
   color: #6f7787;
@@ -469,7 +469,7 @@ a.control-icon-container {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  padding: 20px 70px;
+  padding: 12px 40px;
   margin-bottom: 20px;
 }
 
@@ -479,11 +479,10 @@ a.control-icon-container {
 
 .overall_info_item > p:first-child {
   text-transform: uppercase;
-  margin-bottom: 12px;
 }
 .overall_info_item > p:last-child {
   text-transform: none;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 28px;
   font-weight: 700;
   color: var(--text-color-heading);
@@ -494,14 +493,15 @@ a.control-icon-container {
 
 /*============= Tab start ===========*/
 .tab_btn {
-  padding: 16px;
+  padding: 12px 20px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .tab_btn.active {
   color: var(--primary-color);
   font-weight: 600;
-  border-bottom: 5px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .content {
@@ -535,11 +535,12 @@ a.control-icon-container {
 .list_text {
   color: var(--secondary-color-800);
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 16px;
 }
 
 .list_text.text-lg {
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .list_text.text-neutral {
@@ -652,14 +653,13 @@ a.control-icon-container {
 }
 
 .vertical-stepper__title > p:nth-child(2) {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--text-color-description);
   font-weight: 400;
 }
 
 .vertical-stepper__desc {
   color: grey;
-  font-size: clamp(0.85rem, 2vmax, 1rem);
 
   background-color: var(--neutral-color-100);
   padding: 12px 20px;
@@ -718,16 +718,18 @@ a.control-icon-container {
 .card-description__content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .card-description__content > p:first-child {
   font-weight: 600;
+  font-size: 16px;
+  color: #323743;
 }
 
 .card-description__content > p:last-child {
   color: var(--text-color-description);
-  font-size: 15px;
+  font-size: 13px;
 }
 
 /* ======== Avatar group start ========== */
@@ -861,8 +863,8 @@ a.control-icon-container {
 }
 
 .task-item-content > p:last-child {
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 12px;
   font-weight: 400;
   color: var(--text-color-description);
   margin-bottom: 0;
@@ -875,8 +877,8 @@ a.control-icon-container {
 .event-list {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  gap: 20px;
+  padding: 8px 20px 20px 20px;
+  gap: 24px;
 }
 
 .mission-item {
@@ -911,8 +913,8 @@ a.control-icon-container {
 }
 
 .mission-item-description > p:last-child {
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 12px;
   font-weight: 400;
   color: var(--text-color-description);
   margin-bottom: 0;
@@ -944,7 +946,7 @@ a.control-icon-container {
 .badge.tagging--blue-light,
 .badge.tagging--yellow-light {
   border-radius: 50rem;
-  padding: 12px 18px;
+  padding: 8px 18px;
   font-size: 14px;
   font-weight: 500;
 }
