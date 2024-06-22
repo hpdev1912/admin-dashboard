@@ -1192,44 +1192,43 @@ input:checked + .slider .off {
 .task-board-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 175px);
-  width: calc(100vw - 300px);
-  position: relative;
-  overflow-y: scroll;
-  overflow-x: scroll;
-  gap: 4px;
-  margin: 8px 0;
-}
+  height: calc(100vh - 164px);
 
-.task-board-header {
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  background: white;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .task-board-header,
 .task-board-content {
   display: flex;
-  gap: 8px;
-  width: 100%;
-  white-space: nowrap;
+  column-gap: 8px;
+  min-width: max-content;
+}
+
+.task-board-header {
+  background-color: white;
 }
 
 .task-board-content {
-  height: 100%;
+  flex-grow: 1;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-wrap: wrap;
 }
 
 .task-board-header .task-list-header,
-.task-board-content .task-list {
+.task-board-content .task-board-content-list {
   flex-shrink: 0;
-  width: 315px;
+  width: 316px;
 }
 
-.task-board-content .task-list {
-  height: fit-content;
-  background-color: var(--neutral-color-100);
-  padding: 20px 12px;
+.task-board-content .task-board-content-list {
+  background-color: var(--neutral-color-200);
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .task-board-header .task-list-header {
