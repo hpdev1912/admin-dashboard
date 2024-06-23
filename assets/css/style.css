@@ -136,10 +136,12 @@ ol {
   height: 100vh;
   min-height: 100%;
   float: right;
+  transition: all 0.5s;
 }
 
 .wrapper.minimize-sidebar .app-content {
   width: calc(100% - var(--sidebar-width-minimize));
+  transition: all 0.5s;
 }
 
 .app-content .main {
@@ -159,11 +161,12 @@ ol {
   z-index: var(--z-fixed);
   background-color: var(--neutral-color-100);
   width: var(--sidebar-width);
-  transition: 0.2s cubic-bezier(0.36, -0.01, 0, 0.77);
+  transition: all 0.5s;
 }
 
 .wrapper.minimize-sidebar .sidebar {
   width: var(--sidebar-width-minimize);
+  transition: all 0.5s;
 }
 
 .sidebar .app-logo {
@@ -192,6 +195,7 @@ ol {
   flex-direction: column;
   height: calc(100vh - var(--header-height));
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .sidebar-bottom-wrapper {
@@ -1354,6 +1358,7 @@ input:checked + .slider .off {
 .wrapper.minimize-sidebar .task-board-content .task-board-content-list {
   flex-shrink: 0;
   width: 351px;
+  transition: all 0.5s;
 }
 
 .task-board-content .task-board-content-list {
