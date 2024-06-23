@@ -37,6 +37,7 @@
             <a href="index.html">
               <i class="ri-dashboard-line ri-xl"></i>
               <p>Hồ sơ tín nhiệm</p>
+              <p class="sidebar-minimize-text">Hồ sơ</p>
             </a>
           </div>
 
@@ -44,16 +45,18 @@
             <a href="member-support.html">
               <i class="ri-file-list-2-line ri-xl"></i>
               <p>Chăm sóc thành viên</p>
+              <p class="sidebar-minimize-text">Chăm sóc</p>
             </a>
           </div>
 
           <div class="sidebar-item">
             <a href="#">
               <i class="ri-mail-line ri-xl"></i>
-              <p>Hộp thư</p>
-              <span class="badge rounded-circle d-inline-flex ms-auto unread"
-                >9</span
-              >
+              <p>
+                Hộp thư
+                <span class="badge rounded-circle unread ms-5">9</span>
+              </p>
+              <p class="sidebar-minimize-text">Hộp thư</p>
             </a>
           </div>
 
@@ -61,6 +64,7 @@
             <a href="#">
               <i class="ri-bar-chart-box-line ri-xl"></i>
               <p>Báo cáo hiệu suất</p>
+              <p class="sidebar-minimize-text">Hiệu suất</p>
             </a>
           </div>
 
@@ -68,6 +72,7 @@
             <a href="#">
               <i class="ri-contacts-book-line ri-xl"></i>
               <p>Kết nối của tôi</p>
+              <p class="sidebar-minimize-text">Kết nối</p>
             </a>
           </div>
 
@@ -75,6 +80,7 @@
             <a href="#">
               <i class="ri-team-line ri-xl"></i>
               <p>Nhóm của tôi</p>
+              <p class="sidebar-minimize-text">Nhóm</p>
             </a>
           </div>
 
@@ -82,6 +88,7 @@
             <a href="#">
               <i class="ri-group-2-line ri-xl"></i>
               <p>Nhóm tôi quản lí</p>
+              <p class="sidebar-minimize-text">Quản lí</p>
             </a>
           </div>
 
@@ -91,13 +98,15 @@
             <a href="#">
               <i class="ri-planet-line ri-xl"></i>
               <p>Khám phá nhóm VNE</p>
+              <p class="sidebar-minimize-text">Nhóm VNE</p>
             </a>
           </div>
 
           <div class="sidebar-item">
             <a href="#">
               <i class="ri-shake-hands-line ri-xl"></i>
-              <p>Chăm sóc thành viên</p>
+              <p>Tìm kiếm nhà cung cấp</p>
+              <p class="sidebar-minimize-text">Tìm NCC</p>
             </a>
           </div>
 
@@ -117,10 +126,23 @@
               <div class="sidebar-sub-menu-item">
                 <a href="#">
                   <i class="ri-lightbulb-flash-line ri-xl"></i>
-                  <p class="nav-item__desc">Gợi ý đối tác</p>
+                  <p class="nav-item__desc">Gợi ý kết nối</p>
                 </a>
               </div>
             </div>
+          </div>
+
+          <div class="sidebar-bottom-wrapper">
+            <div class="sidebar-item">
+              <a href="#">
+                <i class="ri-settings-5-line ri-xl"></i>
+                <p>Cấu hình</p>
+              </a>
+            </div>
+
+            <button id="toogle-sidebar" class="toggle-button">
+              <i class="ri-arrow-left-double-line ri-xl"></i>
+            </button>
           </div>
         </div>
       </aside>
@@ -141,7 +163,7 @@
                 >
               </li>
               <li>
-                <a id="user-profile" class="user-profile" href="#">
+                <div id="user-profile" class="user-profile" href="#">
                   <div class="header-avt">
                     <img
                       class="avatar-image rounded-circle"
@@ -149,22 +171,22 @@
                       height="32px"
                       alt="User avatar"
                     />
+                    <ul id="user-profile-options" class="user-menu-list">
+                      <li>
+                        <a href="#">
+                          <i class="ri-menu-line ri-lg"></i>
+                          <span>Sub menu 1</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="ri-logout-box-line ri-lg"></i>
+                          <span>Đăng xuất</span>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                  <ul id="user-profile-options" class="user-menu-list">
-                    <li>
-                      <a href="#">
-                        <i class="ri-menu-line ri-lg"></i>
-                        <span>Sub menu 1</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="ri-logout-box-line ri-lg"></i>
-                        <span>Đăng xuất</span>
-                      </a>
-                    </li>
-                  </ul>
-                </a>
+                </div>
               </li>
             </ul>
           </nav>
@@ -632,7 +654,9 @@
                   <!-- Event Card start -->
                   <div class="card-container yellow p-4">
                     <div class="card-header">
-                      <span class="badge tagging--yellow">Nhóm VNE SUPPORT 01</span>
+                      <span class="badge tagging--yellow"
+                        >Nhóm VNE SUPPORT 01</span
+                      >
                       <span class="card-option">
                         <i class="ri-more-2-line"></i>
                       </span>
@@ -674,7 +698,9 @@
                   <!-- Event Card end-->
                   <div class="card-container blue p-4">
                     <div class="card-header">
-                      <span class="badge tagging--blue">Nhóm VNE SUPPORT 01</span>
+                      <span class="badge tagging--blue"
+                        >Nhóm VNE SUPPORT 01</span
+                      >
                       <span class="card-option">
                         <i class="ri-more-2-line"></i>
                       </span>

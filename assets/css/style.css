@@ -3,6 +3,8 @@
   --header-height: 48px;
   --sidebar-width: 256px;
 
+  --sidebar-width-minimize: 78px;
+
   /*========== Colors ==========*/
   --primary-color: #003285;
 
@@ -11,7 +13,7 @@
   --secondary-color-800: #004065;
 
   --text-color: #565d6d;
-  --text-color-heading: rgba(0, 0, 0, .9);
+  --text-color-heading: rgba(0, 0, 0, 0.9);
   --text-color-description: #6f7787;
   --text-color-title: #323743;
 
@@ -134,7 +136,10 @@ ol {
   height: 100vh;
   min-height: 100%;
   float: right;
-  transition: all 0.3s;
+}
+
+.wrapper.minimize-sidebar .app-content {
+  width: calc(100% - var(--sidebar-width-minimize));
 }
 
 .app-content .main {
@@ -154,10 +159,21 @@ ol {
   z-index: var(--z-fixed);
   background-color: var(--neutral-color-100);
   width: var(--sidebar-width);
+  transition: 0.2s cubic-bezier(0.36, -0.01, 0, 0.77);
+}
+
+.wrapper.minimize-sidebar .sidebar {
+  width: var(--sidebar-width-minimize);
 }
 
 .sidebar .app-logo {
-  padding: 8px;
+  margin: 0 12px 0 12px;
+  height: 48px;
+}
+.wrapper.minimize-sidebar .sidebar .app-logo {
+  background: url("../image/example-logo.jpg") center center no-repeat;
+  background-size: cover;
+  height: 48px;
 }
 
 .sidebar .app-logo > img {
@@ -165,13 +181,72 @@ ol {
   max-height: 100%;
 }
 
-.sidebar-wrapper {
-  padding: 20px 0;
-  margin-left: 4px;
+.wrapper.minimize-sidebar .sidebar .app-logo > img {
+  display: none;
 }
 
-.sidebar-item {
+.sidebar-wrapper {
+  padding: 20px 0 20px 0;
+  margin-right: 4px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+}
+
+.sidebar-bottom-wrapper {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.wrapper.minimize-sidebar .sidebar-bottom-wrapper .sidebar-item a,
+.wrapper .sidebar-bottom-wrapper .sidebar-minimize-text {
+  display: none;
+}
+
+.wrapper.minimize-sidebar .sidebar-bottom-wrapper .sidebar-item a {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+.wrapper.minimize-sidebar .sidebar-bottom-wrapper .sidebar-item a p {
+  font-size: 12px;
+}
+
+.sidebar-bottom-wrapper .toggle-button {
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--text-color);
+  background: transparent;
+  padding: 8px 18px;
   margin-bottom: 4px;
+}
+
+.sidebar-bottom-wrapper .toggle-button > i {
+  align-self: flex-start;
+}
+
+.wrapper.minimize-sidebar .sidebar-bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper.minimize-sidebar .sidebar-item {
+  color: red;
+}
+
+.sidebar-item,
+.sidebar-sub-menu-item {
+  padding-top: 4px;
   cursor: pointer;
   width: 100%;
 }
@@ -197,6 +272,37 @@ hr {
   position: relative;
 }
 
+.wrapper.minimize-sidebar .sidebar .sidebar-wrapper > .sidebar-item a p,
+.wrapper.minimize-sidebar
+  .sidebar
+  .sidebar-wrapper
+  > .sidebar-item.sub-menu
+  > a {
+  display: none;
+}
+
+.wrapper.minimize-sidebar .sidebar .sidebar-wrapper > .sidebar-item a {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 8px;
+  margin-bottom: 8px;
+}
+
+.sidebar .sidebar-wrapper > .sidebar-item a .sidebar-minimize-text {
+  display: none;
+}
+
+.wrapper.minimize-sidebar
+  .sidebar
+  .sidebar-wrapper
+  > .sidebar-item
+  a
+  .sidebar-minimize-text,
+.wrapper.minimize-sidebar .sidebar .sidebar-wrapper .sidebar-sub-menu-item a p {
+  display: block;
+  font-size: 12px;
+}
+
 .sidebar .sidebar-wrapper > .sidebar-item a p {
   font-size: 14px;
   margin-bottom: 0;
@@ -219,6 +325,20 @@ hr {
   font-weight: var(--font-medium);
 }
 
+.wrapper.minimize-sidebar
+  .sidebar
+  .sidebar-wrapper
+  .sidebar-sub-menu-item.active
+  > a::before {
+  position: absolute;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--primary-color);
+  display: block;
+  content: "";
+}
+
 .sidebar-item.active > a {
   color: var(--primary-color);
   font-weight: var(--font-medium);
@@ -238,10 +358,14 @@ hr {
 .header {
   background: #fff;
   min-height: var(--header-height);
-  width: calc(100% - 250px);
+  width: calc(100% - var(--sidebar-width));
   position: fixed;
   z-index: 1001;
   border-bottom: 1px solid lightgray;
+}
+
+.wrapper.minimize-sidebar .app-content .header {
+  width: calc(100% - var(--sidebar-width-minimize));
 }
 
 .header .navbar-header {
@@ -255,8 +379,8 @@ hr {
 }
 
 .navbar-header .header-avt {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .avatar-image {
@@ -310,11 +434,9 @@ hr {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 14px;
 
   display: none;
@@ -322,24 +444,27 @@ hr {
 
 .user-profile {
   position: relative;
+  cursor: pointer;
 }
 
 .user-menu-list {
   position: absolute;
-  right: 20px;
-  top: 90%;
-  /* display: flex; */
+  right: 0;
+  top: 100%;
   flex-direction: column;
   align-items: flex-start;
   background: white;
   border-radius: 6px;
-  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-top: 4px;
   display: none;
+  min-width: 150px;
 }
 
 .user-menu-list > li {
   padding: 12px 20px;
   border-bottom: solid 1px var(--neutral-color-200);
+  width: 100%;
 }
 
 .user-menu-list > li:hover {
@@ -373,7 +498,7 @@ a.control-icon-container {
 
 .page-heading {
   font-size: 18px;
-  color: var(--text-color-heading,rgba(0, 0, 0, .9));
+  color: var(--text-color-heading, rgba(0, 0, 0, 0.9));
 }
 
 /*============= Progressbar start===========*/
@@ -1194,7 +1319,7 @@ input:checked + .slider .off {
 .task-board-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 164px);
+  height: calc(100vh - 135px);
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -1223,6 +1348,12 @@ input:checked + .slider .off {
 .task-board-content .task-board-content-list {
   flex-shrink: 0;
   width: 316px;
+}
+
+.wrapper.minimize-sidebar .task-board-header .task-list-header,
+.wrapper.minimize-sidebar .task-board-content .task-board-content-list {
+  flex-shrink: 0;
+  width: 351px;
 }
 
 .task-board-content .task-board-content-list {
