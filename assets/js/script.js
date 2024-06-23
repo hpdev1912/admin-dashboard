@@ -216,3 +216,47 @@ if (fileUpload) {
     }
   };
 }
+
+// Toggle sidebar
+const toggleBtn = document.getElementById("toogle-sidebar");
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    const appWrapper = document.querySelector(".wrapper");
+    if (appWrapper) {
+      appWrapper.classList.toggle("minimize-sidebar");
+    }
+    if (appWrapper.classList.contains("minimize-sidebar")) {
+      toggleBtn
+        .querySelector("i")
+        .classList.remove("ri-arrow-left-double-line");
+      toggleBtn.querySelector("i").classList.add("ri-arrow-right-double-line");
+    } else {
+      toggleBtn
+        .querySelector("i")
+        .classList.remove("ri-arrow-right-double-line");
+
+      toggleBtn.querySelector("i").classList.add("ri-arrow-left-double-line");
+    }
+  });
+}
+
+//Toggle menu user profile
+const userOptionsMenu = document.getElementById("user-profile-options");
+const userProfileBtn = document.getElementById("user-profile");
+if (userProfileBtn) {
+  userProfileBtn.addEventListener("click", () => {
+    userOptionsMenu.style.display = "flex";
+  });
+}
+
+document.addEventListener("click", function (event) {
+  const userOptionsMenu = document.getElementById("user-profile-options");
+  const userProfileBtn = document.getElementById("user-profile");
+  if (
+    !userProfileBtn.contains(event.target) &&
+    userOptionsMenu.style.display &&
+    userOptionsMenu.style.display !== "none"
+  ) {
+    userOptionsMenu.style.display = "none";
+  }
+});
