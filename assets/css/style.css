@@ -136,12 +136,12 @@ ol {
   height: 100vh;
   min-height: 100%;
   float: right;
-  transition: all 0.5s;
+  transition: 0.4s ease;
 }
 
 .wrapper.minimize-sidebar .app-content {
   width: calc(100% - var(--sidebar-width-minimize));
-  transition: all 0.5s;
+  transition: 0.4s ease;
 }
 
 .app-content .main {
@@ -1351,14 +1351,16 @@ input:checked + .slider .off {
 .task-board-header .task-list-header,
 .task-board-content .task-board-content-list {
   flex-shrink: 0;
-  width: 316px;
+  min-width: 314px;
+  width: 19.6%;
 }
 
 .wrapper.minimize-sidebar .task-board-header .task-list-header,
 .wrapper.minimize-sidebar .task-board-content .task-board-content-list {
   flex-shrink: 0;
-  width: 351px;
-  transition: all 0.5s;
+  min-width: 351px;
+  width: 19.6%;
+  transition: 0.5s ease;
 }
 
 .task-board-content .task-board-content-list {
